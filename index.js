@@ -16,10 +16,28 @@ function minimumBribes(q) {
       //console.log(q[i] + " " + (i+1));
       console.log("Too chaotic");
     }
-    
+
+    console.log("Antes del for: " + q[i]);
+    for (let j = Math.max(0, q[i] - 2); j < i; j++){
+      console.log("I Index: " + i);
+      console.log("I VALUE - 2: " + (q[i]-2));
+      console.log("J Index: " + j);
+      console.log("J Value: " + q[j]);
+      console.log("Compara: " + q[j] + " con " + q[i]);
+      
+      if (q[j] > q[i]){
+        bribe++;
+        console.log("SUMO");
+        console.log("--------");
+      } else {
+        console.log("--------");
+      }
+    }
+          
   } 
 
+  console.log(bribe);
 }
 
 
-minimumBribes(queue3);
+minimumBribes(queue2);
